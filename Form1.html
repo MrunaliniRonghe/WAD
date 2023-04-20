@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1 style="text-align: center; color: green;">LOGIN</h1>
+    <div style="margin-left: 300px; margin-right: 300px; height: 500px; width: 50%; background-color: aquamarine;">
+        <form style="text-align: center; padding-top: 100px;">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br><br>
+    
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br><br>
+    
+            <label for="lname">User name:</label><br>
+            <input type="text" id="uname" name="uname"><br><br>
+    
+            <label for="lname">Password:</label><br>
+            <input type="text" id="pswd" name="pswd"><br><br>
+
+        </form>
+        <a href="MyFunctn2.html">
+            <button onclick="myFunction()">Create Account</button>
+        </a>
+    </div>
+
+    <script>
+
+        function myFunction() {
+        var fname = document.getElementById("fname").value;
+        var lname = document.getElementById("lname").value;
+        var uname = document.getElementById("uname").value;
+        var pswd = document.getElementById("pswd").value;
+
+        localStorage.setItem("fname",fname);
+        localStorage.setItem("lname",lname);
+        localStorage.setItem("uname",uname);
+        localStorage.setItem("pswd",pswd);
+        }
+        
+    </script>
+
+</body>
+</html>
